@@ -76,7 +76,7 @@ function onMessageArrived(message) {
 }
 
 function connect() {
-  var hostname = 'localhost';
+  var hostname = '34.91.128.4';
   var port = '9001';
   var clientId = "js-utility-" + makeid();
   var path = '/ws';
