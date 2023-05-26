@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/registro.js"></script>    
+    <title>User Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='1200' preserveAspectRatio='none' viewBox='0 0 1440 1200'%3e%3cg clip-path='url(%26quot%3b%23SvgjsClipPath14877%26quot%3b)' fill='none'%3e%3crect width='1440' height='1200' x='0' y='0' fill='%2332325d'%3e%3c/rect%3e%3ccircle r='36.555' cx='182.54' cy='1021.98' fill='url(%23SvgjsLinearGradient14878)'%3e%3c/circle%3e%3ccircle r='70.11' cx='305.78' cy='323.42' fill='url(%23SvgjsLinearGradient14879)'%3e%3c/circle%3e%3ccircle r='54.245' cx='341.44' cy='614.24' fill='url(%23SvgjsLinearGradient14880)'%3e%3c/circle%3e%3ccircle r='77.055' cx='1033.1' cy='958.4' fill='url(%23SvgjsLinearGradient14881)'%3e%3c/circle%3e%3ccircle r='82' cx='1080.67' cy='876.03' fill='url(%23SvgjsLinearGradient14882)'%3e%3c/circle%3e%3ccircle r='112.53' cx='97.78' cy='1068.81' fill='url(%23SvgjsLinearGradient14883)'%3e%3c/circle%3e%3ccircle r='34.09' cx='1244.41' cy='451.56' fill='url(%23SvgjsLinearGradient14884)'%3e%3c/circle%3e%3ccircle r='49.565' cx='985.5' cy='214.74' fill='url(%23SvgjsLinearGradient14885)'%3e%3c/circle%3e%3ccircle r='119.595' cx='330.2' cy='652.38' fill='url(%23SvgjsLinearGradient14886)'%3e%3c/circle%3e%3ccircle r='105.605' cx='987.15' cy='998.32' fill='url(%23SvgjsLinearGradient14887)'%3e%3c/circle%3e%3ccircle r='57.155' cx='127.51' cy='676.12' fill='url(%23SvgjsLinearGradient14888)'%3e%3c/circle%3e%3ccircle r='69.555' cx='218.63' cy='483.65' fill='url(%23SvgjsLinearGradient14889)'%3e%3c/circle%3e%3ccircle r='56.465' cx='775.56' cy='1132.22' fill='url(%23SvgjsLinearGradient14890)'%3e%3c/circle%3e%3ccircle r='85.195' cx='1404.85' cy='855.67' fill='url(%23SvgjsLinearGradient14891)'%3e%3c/circle%3e%3c/g%3e%3cdefs%3e%3cclipPath id='SvgjsClipPath14877'%3e%3crect width='1440' height='1200' x='0' y='0'%3e%3c/rect%3e%3c/clipPath%3e%3clinearGradient x1='109.42999999999999' y1='948.87' x2='255.64999999999998' y2='1095.09' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14878'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(33%2c 29%2c 162%2c 0.42)' offset='0.71'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='165.55999999999997' y1='323.42' x2='446' y2='323.42' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14879'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='232.95' y1='505.75' x2='449.92999999999995' y2='722.73' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14880'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(33%2c 29%2c 162%2c 0.42)' offset='0.71'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='878.9899999999999' y1='958.4' x2='1187.21' y2='958.4' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14881'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='916.6700000000001' y1='876.03' x2='1244.67' y2='876.03' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14882'%3e%3cstop stop-color='%2332325d' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(61%2c 63%2c 147%2c 0.49)' offset='0.67'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='-127.28' y1='1068.81' x2='322.84000000000003' y2='1068.81' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14883'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1176.23' y1='451.56' x2='1312.5900000000001' y2='451.56' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14884'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1084.63' y1='214.74' x2='886.37' y2='214.74' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14885'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(28%2c 31%2c 73%2c 0.56)' offset='0.53'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='91.00999999999999' y1='652.38' x2='569.39' y2='652.38' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14886'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='775.9399999999999' y1='998.32' x2='1198.36' y2='998.32' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14887'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.55)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='13.200000000000003' y1='676.1199999999999' x2='241.82' y2='676.1199999999999' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14888'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='79.51999999999998' y1='483.65' x2='357.74' y2='483.65' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14889'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='662.6299999999999' y1='1132.22' x2='888.4899999999999' y2='1132.22' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14890'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1234.46' y1='685.28' x2='1575.24' y2='1026.06' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14891'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(33%2c 29%2c 162%2c 0.42)' offset='0.71'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");    
+        background-repeat: no-repeat;
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-position: center;
+    }
+    th,td,label{
+        color: aliceblue;
+    }
+   
+</style>
+<body onload="readAllUsers()">
+    <div class="container mt-5">
+        <h1 class="text-center text-light"> RECEPCION</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" class="form-control" type="text" placeholder="Nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="identificacion">Identificación:</label>
+                <input id="identificacion" class="form-control" type="text" placeholder="Identificación">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input id="fecha" class="form-control" type="date" placeholder="Fecha">
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_identificacion">Tipo de Identificación:</label>
+                <input id="tipo_identificacion" class="form-control" type="text" placeholder="Tipo de Identificación">
+            </div>
+
+            <div class="form-group">
+                <label for="motivo">Motivo:</label>
+                <input id="motivo" class="form-control" type="text" placeholder="Motivo">
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="createUser()">Guardar</button>
+        </form>
+
+        <table id="table-user" class="table mt-5">
+            <thead>
+                <tr>
+                    <th >id</th>
+                    <th>nombre</th>
+                    <th>identificacion</th>
+                    <th>fecha</th>
+                    <th>tipo_identificacion</th>
+                    <th>motivo</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -2,9 +2,9 @@
     $mqtt_secret = "";
     class Database {
         private $host = 'localhost';
-        private $database_name = 'iot';
-        private $username = 'pi';
-        private $password = 'raspberry';
+        private $database_name = 'recepcion';
+        private $username = 'root';
+        private $password = '';
         public $conn;
         
         public function getConnection(){
