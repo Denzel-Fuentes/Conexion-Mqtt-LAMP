@@ -3,8 +3,8 @@
     class Database {
         private $host = 'localhost';
         private $database_name = 'recepcion';
-        private $username = 'root';
-        private $password = '';
+        private $username = 'admin@';
+        private $password = 'Admin_@++';
         public $conn;
         
         public function getConnection(){
