@@ -80,8 +80,8 @@ function connect() {
   var port = '9001';
   var clientId = "js-utility-" + makeid();
   var path = '/ws';
-  var user = '';
-  var pass = '';
+  var user = 'denzel';
+  var pass = 'denzel';
   var keepAlive = 60;
   var timeout = 3;
   var tls = false;
