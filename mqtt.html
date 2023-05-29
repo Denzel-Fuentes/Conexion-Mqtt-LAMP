@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Mqtt</title>
   <!-- Latest compiled and minified CSS -->
@@ -7,13 +8,29 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
   <!-- Custom Styles theme -->
   <link rel="stylesheet" href="style.css">
+  <style>
+        body {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='1200' preserveAspectRatio='none' viewBox='0 0 1440 1200'%3e%3cg clip-path='url(%26quot%3b%23SvgjsClipPath14877%26quot%3b)' fill='none'%3e%3crect width='1440' height='1200' x='0' y='0' fill='%2332325d'%3e%3c/rect%3e%3ccircle r='36.555' cx='182.54' cy='1021.98' fill='url(%23SvgjsLinearGradient14878)'%3e%3c/circle%3e%3ccircle r='70.11' cx='305.78' cy='323.42' fill='url(%23SvgjsLinearGradient14879)'%3e%3c/circle%3e%3ccircle r='54.245' cx='341.44' cy='614.24' fill='url(%23SvgjsLinearGradient14880)'%3e%3c/circle%3e%3ccircle r='77.055' cx='1033.1' cy='958.4' fill='url(%23SvgjsLinearGradient14881)'%3e%3c/circle%3e%3ccircle r='82' cx='1080.67' cy='876.03' fill='url(%23SvgjsLinearGradient14882)'%3e%3c/circle%3e%3ccircle r='112.53' cx='97.78' cy='1068.81' fill='url(%23SvgjsLinearGradient14883)'%3e%3c/circle%3e%3ccircle r='34.09' cx='1244.41' cy='451.56' fill='url(%23SvgjsLinearGradient14884)'%3e%3c/circle%3e%3ccircle r='49.565' cx='985.5' cy='214.74' fill='url(%23SvgjsLinearGradient14885)'%3e%3c/circle%3e%3ccircle r='119.595' cx='330.2' cy='652.38' fill='url(%23SvgjsLinearGradient14886)'%3e%3c/circle%3e%3ccircle r='105.605' cx='987.15' cy='998.32' fill='url(%23SvgjsLinearGradient14887)'%3e%3c/circle%3e%3ccircle r='57.155' cx='127.51' cy='676.12' fill='url(%23SvgjsLinearGradient14888)'%3e%3c/circle%3e%3ccircle r='69.555' cx='218.63' cy='483.65' fill='url(%23SvgjsLinearGradient14889)'%3e%3c/circle%3e%3ccircle r='56.465' cx='775.56' cy='1132.22' fill='url(%23SvgjsLinearGradient14890)'%3e%3c/circle%3e%3ccircle r='85.195' cx='1404.85' cy='855.67' fill='url(%23SvgjsLinearGradient14891)'%3e%3c/circle%3e%3c/g%3e%3cdefs%3e%3cclipPath id='SvgjsClipPath14877'%3e%3crect width='1440' height='1200' x='0' y='0'%3e%3c/rect%3e%3c/clipPath%3e%3clinearGradient x1='109.42999999999999' y1='948.87' x2='255.64999999999998' y2='1095.09' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14878'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(33%2c 29%2c 162%2c 0.42)' offset='0.71'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='165.55999999999997' y1='323.42' x2='446' y2='323.42' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14879'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='232.95' y1='505.75' x2='449.92999999999995' y2='722.73' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14880'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(33%2c 29%2c 162%2c 0.42)' offset='0.71'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='878.9899999999999' y1='958.4' x2='1187.21' y2='958.4' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14881'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='916.6700000000001' y1='876.03' x2='1244.67' y2='876.03' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14882'%3e%3cstop stop-color='%2332325d' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(61%2c 63%2c 147%2c 0.49)' offset='0.67'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='-127.28' y1='1068.81' x2='322.84000000000003' y2='1068.81' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14883'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1176.23' y1='451.56' x2='1312.5900000000001' y2='451.56' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14884'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1084.63' y1='214.74' x2='886.37' y2='214.74' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14885'%3e%3cstop stop-color='%2384b6e0' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(28%2c 31%2c 73%2c 0.56)' offset='0.53'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='91.00999999999999' y1='652.38' x2='569.39' y2='652.38' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14886'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='775.9399999999999' y1='998.32' x2='1198.36' y2='998.32' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14887'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.55)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='13.200000000000003' y1='676.1199999999999' x2='241.82' y2='676.1199999999999' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14888'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='79.51999999999998' y1='483.65' x2='357.74' y2='483.65' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14889'%3e%3cstop stop-color='%23ab3c51' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(79%2c 68%2c 132%2c 0.59)' offset='0.76'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='662.6299999999999' y1='1132.22' x2='888.4899999999999' y2='1132.22' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14890'%3e%3cstop stop-color='%23f29b7c' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 30%2c 164%2c 0.55)' offset='0.65'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='1234.46' y1='685.28' x2='1575.24' y2='1026.06' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient14891'%3e%3cstop stop-color='%23e298de' offset='0.1'%3e%3c/stop%3e%3cstop stop-color='rgba(33%2c 29%2c 162%2c 0.42)' offset='0.71'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-y;
+    }
+    label{
+      color: rgb(38, 174, 181);
+    }
+    .container{
+      padding-top: 10%;
+      padding-left: 5%;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
     <!-- Connection panel -->
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">
             <span id="connectionStatus">Connection - Disconnected.</span>
@@ -24,31 +41,33 @@
                 <table>
                   <tbody>
                     <tr>
-                      <td><label for="boton_bool" class="label-toggle" >boton_bool</label></td>
+                      <td><label for="boton_bool" class="label-toggle">boton_bool</label></td>
                       <td>
                         <label class="switch">
-                          <input type="checkbox" id ="boton_bool" disabled>
+                          <input type="checkbox" id="boton_bool" disabled>
                           <span class="slider round"></span>
                         </label>
-                    </td>
+                      </td>
                     </tr>
-                    
+
                     <tr>
                       <td><label for="valor_analog">valor_analog</label></td>
                       <td><label id="valor_analog"></label></td>
                     </tr>
                   </tbody>
                 </table>
-                
+
                 <div class="form-group">
                   <label for="publishButton"></label>
-                  <button id="publishButton" type="button" class="btn btn-default" onclick="publish('boton_bool',0, '1', false);" disabled>Publicar 1 en boton_bool</button>
-                </div>              
+                  <button id="publishButton" type="button" class="btn btn-default"
+                    onclick="publish('boton_bool',0, '1', false);" disabled>Publicar 1 en boton_bool</button>
+                </div>
 
                 <div class="form-group">
                   <label for="publishButton2"></label>
-                  <button id="publishButton2" type="button" class="btn btn-default" onclick="publish('boton_bool',0, '0', false);" disabled>Publicar 0 en boton_bool</button>
-                </div>                 
+                  <button id="publishButton2" type="button" class="btn btn-default"
+                    onclick="publish('boton_bool',0, '0', false);" disabled>Publicar 0 en boton_bool</button>
+                </div>
 
                 <div class="form-group">
                   <input type="text" id="analog_value" value="654">
@@ -56,32 +75,46 @@
 
                 <div class="form-group">
                   <label for="publishButton3"></label>
-                  <button id="publishButton3" type="button" class="btn btn-default" onclick="publish('valor_analog',0, document.getElementById('analog_value').value, false);" >Publicar Analogico</button>
+                  <button id="publishButton3" type="button" class="btn btn-default"
+                    onclick="publish('valor_analog',0, document.getElementById('analog_value').value, false);">Publicar
+                    Analogico</button>
                 </div>
-                
-                <div class="form-group">
-                  <label for="clientConnectButton"></label>
-                  <a id="clientConnectButton" class="btn btn-default" onclick="connectionToggle();">Connect</a>
-                  </div>
+
+              
 
 
+              </div>
             </div>
           </div>
+          <!-- End of Connection panel -->
+
         </div>
-  <!-- End of Connection panel -->
+        <di class="row">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <button id="connectButton" type="button" class="btn btn-primary" onclick="connect();">Conectar</button>
+            </div>
+          
+        </di>
 
-  </div>
+        <!-- Source Paho MQTT Client-->
+        <script src="paho-mqtt.js"></script>
+        <!--<script src="../src/paho-mqtt.js"></script>-->
 
-  <!-- Source Paho MQTT Client-->
-  <script src="paho-mqtt.js"></script>
-  <!--<script src="../src/paho-mqtt.js"></script>-->
+        <!-- Utility AJavascript -->
+        <script src="utility.js"></script>
 
-  <!-- Utility AJavascript -->
-  <script src="utility.js"></script>
-
-  <!-- Javascript used for Bootstrap Theme -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <!-- Javascript used for Bootstrap Theme -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ var client = null;
 var connected = false;
 topics = ['boton_bool','valor_analog'];
 
-connect();
+//connect();
 
 
 // called when the client connects
@@ -80,8 +80,8 @@ function connect() {
   var port = '9001';
   var clientId = "js-utility-" + makeid();
   var path = '/ws';
-  var user = 'denzel';
-  var pass = 'denzel';
+  var user = document.getElementById('username').value;
+  var pass = document.getElementById('password').value;
   var keepAlive = 60;
   var timeout = 3;
   var tls = false;
@@ -149,14 +149,15 @@ function disconnect() {
 
 // Sets various form controls to either enabled or disabled
 function setFormEnabledState(enabled) {
-
-  // Connection Panel Elements
-  if (enabled) {
-    document.getElementById("clientConnectButton").innerHTML = "Desconectar";
-  } else {
-    document.getElementById("clientConnectButton").innerHTML = "Conectar";
+  let btn = document.getElementById('connectButton');
+  if(enabled){
+    btn.innerText = "Desconectar";
+    btn.onclick = disconnect;
+  }else{
+    btn.innerText = "Conectar";
+    btn.onclick = connect;
   }
-
+  
   // Publish Panel Elements
   document.getElementById("publishButton").disabled = !enabled;
   document.getElementById("publishButton2").disabled = !enabled;
