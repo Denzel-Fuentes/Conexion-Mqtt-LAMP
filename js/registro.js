@@ -55,7 +55,7 @@ function deleteUser(id_del) {
 }
 
 function createUser() {
-    if(!validarDatos()) return 
+    if (!validarDatos()) return
     let user = {
         nombre: document.getElementById('nombre').value,
         identificacion: document.getElementById('identificacion').value,
@@ -81,7 +81,7 @@ function createUser() {
 }
 
 function updateUser(id_update) {
-    if(!validarDatos()) return 
+    if (!validarDatos()) return
     let name_update = document.getElementById('nombre').value;
     if (name_update != "") {
 
@@ -159,7 +159,7 @@ function validarDatos() {
     }
     var alertElement = document.getElementById("alertMessage");
     alertElement.innerText = '';
-    alertElement.classList.remove("alert","alert-danger")
+    alertElement.classList.remove("alert", "alert-danger")
     // Si todas las validaciones son exitosas, puedes proceder a guardar los datos o realizar otras acciones
     // Aquí puedes agregar el código para guardar los datos en una base de datos o realizar alguna otra acción
     return true;
@@ -186,33 +186,33 @@ function showAlert(message) {
 function showIncompleteFieldsMessage() {
     var alertElement = document.getElementById("alertMessage");
     var incompleteFields = [];
-  
+
     if (document.getElementById("nombre").value === "") {
-      incompleteFields.push("Nombre");
+        incompleteFields.push("Nombre");
     }
     if (document.getElementById("identificacion").value === "") {
-      incompleteFields.push("Identificación");
+        incompleteFields.push("Identificación");
     }
     if (document.getElementById("fecha").value === "") {
-      incompleteFields.push("Fecha");
+        incompleteFields.push("Fecha");
     }
     if (document.getElementById("tipo_identificacion").value === "") {
-      incompleteFields.push("Tipo de Identificación");
+        incompleteFields.push("Tipo de Identificación");
     }
     if (document.getElementById("motivo").value === "") {
-      incompleteFields.push("Motivo");
+        incompleteFields.push("Motivo");
     }
-  
+
     if (incompleteFields.length > 0) {
-      var message = "Por favor, completa los siguientes campos: " + incompleteFields.join(", ");
-      alertElement.innerText = message;
-      alertElement.classList.add("alert", "alert-danger");
+        var message = "Por favor, completa los siguientes campos: " + incompleteFields.join(", ");
+        alertElement.innerText = message;
+        alertElement.classList.add("alert", "alert-danger");
     }
-  }
-  // validar que el nombre solo sean letras
-  function validateLettersOnly(input) {
+}
+// validar que el nombre solo sean letras
+function validateLettersOnly(input) {
     var regex = /^[A-Za-z\s]+$/;
     if (!regex.test(input.value)) {
-      input.value = input.value.replace(/[^A-Za-z\s]/g, '');
+        input.value = input.value.replace(/[^A-Za-z\s]/g, '');
     }
-  }
+}
